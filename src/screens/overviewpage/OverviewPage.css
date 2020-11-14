@@ -1,0 +1,53 @@
+.overview-page {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr 5fr;
+}
+
+.overview-page .welcome {
+  padding: 0.5rem;
+}
+
+.overview-page .welcome .welcome-buttons {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.overview-page .welcome .welcome-buttons button {
+  height: 4vw;
+  border-radius: 20px;
+  border: none;
+  background: #2699FB;
+  color: white;
+  margin-left: 0.5vw;
+  cursor: pointer;
+}
+
+.overview-page .welcome .welcome-buttons button:hover,
+.overview-page .welcome .welcome-buttons button:focus {
+  background: #5a92c2;
+}
+
+.overview-page .chart {
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+}
+
+.overview-page .chart .barchart, .overview-page .chart .piechart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .overview-page .chart .barchart {
+  background: blanchedalmond;
+} */
+
+.piechart {
+  /* background: #dfe6e8; */
+  display: flex;
+  flex-direction: column;
+}

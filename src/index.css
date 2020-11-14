@@ -1,13 +1,258 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 30vw 70vw;
+  min-height: 100vh;
+  background: #c7e3ed;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 2vw;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 1vw;
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  height: 80vh;
+  position: sticky;
+  top: 2%;
+}
+
+.side header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10rem;
+  padding: 0 0.5rem;
+}
+
+header h2,
+header h1 {
+  padding: 0 0.5rem;
+}
+
+.logo-div {
+  height: 10rem;
+  width: 10rem;
+}
+
+.logo-div img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.errors-logged {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  min-height: 60vh;
+}
+
+.errors-logged div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  width: 100%;
+  height: 20%;
+  border-radius: 24px;
+  padding: 0 1rem;
+}
+
+.main-page {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background: white;
+  border-radius: 40px 0 0 0;
+}
+
+.main-page nav.navbar {
+  background: #dfe6e8;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 40px 0 0 0;
+  height: 10vh;
+  width: 100%;
+  margin: 0;
+  transition: transparent 250ms ease-in;
+  /* position: sticky;
+  top: 0; */
+}
+
+.main-page .main-body {
+  min-height: 90vh;
+}
+
+.main-page nav.navbar ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.main-page nav.navbar ul li {
+  margin-left: 1rem;
+  list-style: none;
+}
+
+.main-page .main-body {
+  padding: 0;
+  margin: 0;
+  min-height: 90vh;
+}
+
+.main-page .main-body h1 {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-control label,
+.form-control input,
+.form-control textarea {
+  width: 100%;
+  display: block;
+}
+
+.form-control label {
+  margin-bottom: 0.5rem;
+}
+
+.form-control {
+  margin-bottom: 1rem;
+}
+
+.form-actions button,
+.btn,
+.poller__details-page button {
+  background: rgb(77, 136, 214);
+  font: inherit;
+  border: 1px solid rgb(77, 136, 214);
+  color: white;
+  border-radius: 5px;
+  padding: 0.25rem 1rem;
+  margin-right: 1rem;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.26);
+  cursor: pointer;
+}
+
+.form-actions button:hover,
+.form-actions button:active,
+.btn:hover,
+.btn:active,
+.poller__details-page button:hover,
+.poller__details-page button:active {
+  background: rgb(77, 136, 214);
+  border-color: rgb(109, 135, 168);
+  color: rgb(178, 183, 187);
+}
+
+.btn:focus,
+.poller__details-page button {
+  outline: none;
+}
+
+.pollerPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 1200px;
+}
+
+.pollerPage h1 {
+  color: rgb(77, 136, 214);
+  font-size: 2rem;
+  padding: 4px;
+  width: 60%;
+  border-radius: 10px;
+}
+
+.pollerPage ul {
+  margin: 0 auto;
+  width: 100%;
+  padding: 4px;
+}
+
+.poller {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+  padding: 8px;
+  border-left: 4px solid rgb(77, 136, 214);
+  background: rgb(229, 233, 238);
+  border-radius: 0 12px 12px 0;
+  margin: 0px 0px 10px 0px;
+}
+
+.poller-details {
+  width: 100%;
+}
+
+.poller-details p {
+  font-size: 1rem;
+  padding: 4px;
+  color: black;
+}
+
+.poller-details p span {
+  color: rgb(77, 136, 214);
+  margin-right: 4px;
+  font-size: 1rem;
+  padding: 2px;
+  border-radius: 5px 0px 0px 5px;
+}
+
+.poller a button {
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  width: 8rem;
+  height: 2rem;
+  background: rgb(77, 136, 214);
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+.poller a button:hover,
+.poller a button:focus {
+  background: rgb(109, 136, 172);
+  color: rgb(255, 255, 255);
+}
+
+.poller a button:active {
+  outline: none;
+}
+
+.disabled {
+  pointer-events: none;
+  color: grey;
 }
