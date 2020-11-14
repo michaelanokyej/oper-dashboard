@@ -15,7 +15,7 @@ const Main = () => {
       <nav className="navbar">
         <ul className="main-routes">
           <li className="route-item">
-            <NavLink to="/">Overview</NavLink>
+            <NavLink to="/" exact>Overview</NavLink>
           </li>
           <li className="route-item">
             <NavLink to="/pollers">Pollers</NavLink>

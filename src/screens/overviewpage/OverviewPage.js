@@ -81,7 +81,7 @@ class OverviewPage extends Component {
         })
         .then((res) => {
           this.setState({ loggingError: false, addingOperation: false });
-          this.context.errors.push(res)
+          this.context.errors.push(res);
           Swal.fire(`${res.error_description} has been added`);
         })
         .catch((err) => {
@@ -177,8 +177,8 @@ class OverviewPage extends Component {
         .then((res) => {
           return res.json();
         })
-        .then((res) => {        
-          this.context.operators.push(res)
+        .then((res) => {
+          this.context.operators.push(res);
           this.setState({
             loggingError: false,
             addingOperation: false,
@@ -200,8 +200,6 @@ class OverviewPage extends Component {
   };
 
   render() {
-    const operations = this.context.operations;
-    const operators = this.context.operators;
     return (
       <>
         {(this.state.loggingError ||
@@ -220,7 +218,7 @@ class OverviewPage extends Component {
               <div className="form-control">
                 <label htmlFor="operation">operation</label>
                 <select ref={this.operationIdElRef}>
-                  {operations.map((operation, i) => {
+                  {this.context.operations.map((operation, i) => {
                     return (
                       <option key={i} value={operation.id}>
                         {operation.operation_name}
@@ -233,7 +231,7 @@ class OverviewPage extends Component {
                 <label htmlFor="operator">Operator</label>
 
                 <select ref={this.operatorElRef}>
-                  {operators.map((oper, i) => {
+                  {this.context.operators.map((oper, i) => {
                     return (
                       <option key={oper.id} value={oper.id}>
                         {oper.username.toUpperCase()}
@@ -319,9 +317,9 @@ class OverviewPage extends Component {
           <div className="welcome">
             <h1>WELCOME TO YOUR DASHBOARD</h1>
             <div className="welcome-buttons">
-            <button onClick={this.addOperator}>ADD OPER</button>
-            <button onClick={this.addOperationError}>ADD OPERATION</button>
-            <button onClick={this.logErrorHandler}>LOG ERROR</button>
+              <button onClick={this.addOperator}>ADD OPER</button>
+              <button onClick={this.addOperationError}>ADD OPERATION</button>
+              <button onClick={this.logErrorHandler}>LOG ERROR</button>
             </div>
           </div>
           <div className="chart">

@@ -132,10 +132,10 @@ class operationPage extends Component {
         <h1>Operation Details Page</h1>
         <div className="poller-description">
           <p>
-            <span>Poller Name:</span> {operationDetails.operation_name}
+            <span>Operation Name:</span> {operationDetails.operation_name}
           </p>
           <p>
-            <span>Poller Description:</span> {operationDetails.description}
+            <span>Operation Description:</span> {operationDetails.description}
           </p>
         </div>
         <div>

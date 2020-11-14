@@ -7,3 +7,26 @@
   padding: 2rem;
   border-radius: 16px;
 }
+
+p.error_desc::before {
+  content: "Error Description";
+  display: block;
+  color: rgb(77, 136, 214);
+  font-size: 1rem;
+  padding: 2px;
+}
+
+p.error_desc, p.posted {
+  background: white;
+  width: 80%;
+  padding: 1vw;
+  border-radius: 12px;
+}
+
+p.posted::before {
+  content: "Logged on";
+  color: rgb(77, 136, 214);
+  margin-right: 4px;
+  font-size: 1rem;
+  padding: 2px;
+}

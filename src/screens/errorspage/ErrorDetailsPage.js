@@ -73,8 +73,8 @@ class errorDetailsPage extends Component {
   render() {
     return (
       <div className="poller__details-page">
-        <h1>{this.state.error.operation_name}</h1>
-        <p className="error_desc">{this.state.error.error_description}</p>
+        <h1>Operation {" "} - {" "} {this.state.error.operation_name}</h1>
+        <p className="error_desc"> {this.state.error.error_description}</p>
         <p className="posted">
           {new Date(this.state.error.posted).toUTCString()}{" "}
         </p>
